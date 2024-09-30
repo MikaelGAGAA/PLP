@@ -1,14 +1,13 @@
-#include <stdio.h>
+#include <stdio.h> 
 
 int main() {
 
    int tableau[100];
 
-   for (int compteur = 0; compteur < sizeof(tableau); compteur++) { //Erreur
+   // Boucle pour parcourir les éléments du tableau
+   for (int compteur = 0; compteur < sizeof(tableau) / sizeof(tableau[0]); compteur++) {
        tableau[compteur] = tableau[compteur] * 2;
    }
 
-   return (0);
-
+   return 0;
 }
-
