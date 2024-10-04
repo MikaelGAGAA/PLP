@@ -19,3 +19,4 @@ resultat = double_values(tableau)
 # Afficher le résultat final
 print(resultat)
 
+# L'erreur est simplement due à la condition dans la boucle. Le programme multiplie certains éléments par 2 et d'autres par 3

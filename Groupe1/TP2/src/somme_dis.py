@@ -26,22 +26,24 @@ if __name__ == "__main__":
     main()
 
 # avec la boucle FOR :
-# LOAD_CONST               1 (0)    # Initialisation de la variable 'somme' à 0
-# STORE_FAST               1 (somme)
 
-# LOAD_FAST                0 (n)    # Charger l'argument 'n' pour l'itérer
-# GET_ITER                          # Obtenir un itérateur sur la séquence range(n)
-# FOR_ITER                14 (to 24) # Instruction pour commencer la boucle, se dirige vers la fin si l'itérateur est épuisé
-# STORE_FAST               2 (i)    # Stocker la valeur actuelle de l'itérateur dans 'i'
 
-# LOAD_FAST                1 (somme) # Charger la valeur actuelle de 'somme'
-# LOAD_FAST                2 (i)    # Charger la valeur de 'i'
-# INPLACE_ADD                      # Effectuer l'addition de 'somme' et 'i'
-# STORE_FAST               1 (somme) # Stocker la nouvelle valeur de 'somme'
+# LOAD_CONST        Initialisation de la variable 'somme' à 0
+# STORE_FAST           
 
-# JUMP_ABSOLUTE            8        # Retourner au début de la boucle (FOR_ITER)
-# LOAD_FAST                1 (somme) # Charger la valeur finale de 'somme'
-# RETURN_VALUE                     # Retourner la valeur finale
+# LOAD_FAST         Charger l'argument 'n' pour l'itérer
+# GET_ITER          Obtenir un itérateur sur la séquence range(n)
+# FOR_ITER          Instruction pour commencer la boucle, se dirige vers la fin si l'itérateur est épuisé
+# STORE_FAST        Stocker la valeur actuelle de l'itérateur dans 'i'
+
+# LOAD_FAST         Charger la valeur actuelle de 'somme'
+# LOAD_FAST         Charger la valeur de 'i'
+# INPLACE_ADD       Effectuer l'addition de 'somme' et 'i'
+# STORE_FAST         Stocker la nouvelle valeur de 'somme'
+
+# JUMP_ABSOLUTE     Retourner au début de la boucle (FOR_ITER)
+# LOAD_FAST         Charger la valeur finale de 'somme'
+# RETURN_VALUE      Retourner la valeur finale
 # 
 # GET_ITER : Cette instruction est utilisée pour obtenir un itérateur de l'objet passé, dans ce cas, la séquence range(n). Elle transforme un objet iterable en itérateur, ce qui permet la boucle.
 # FOR_ITER : C'est l'instruction principale qui contrôle la boucle. Elle récupère l'élément suivant de l'itérateur. Si l'itérateur est épuisé, il saute à la fin de la boucle.
@@ -51,29 +53,6 @@ if __name__ == "__main__":
 
 # Avec la boucle While :
 
-#   3           0 LOAD_CONST               1 (0)    # Initialisation de 'somme'
-#               2 STORE_FAST               1 (somme)
-#               4 LOAD_CONST               1 (0)    # Initialisation de 'i'
-#               6 STORE_FAST               2 (i)
-
-#   4     >>    8 LOAD_FAST                2 (i)    # Charger 'i'
-#              10 LOAD_FAST                0 (n)    # Charger 'n'
-#              12 COMPARE_OP               0 (<)    # Comparer 'i' et 'n'
-#              14 POP_JUMP_IF_FALSE       30        # Si 'i >= n', sauter à la fin (ligne 30)
-
-#   5          16 LOAD_FAST                1 (somme) # Charger 'somme'
-#              18 LOAD_FAST                2 (i)    # Charger 'i'
-#              20 INPLACE_ADD                      # Ajouter 'i' à 'somme'
-#              22 STORE_FAST               1 (somme) # Stocker la nouvelle valeur de 'somme'
-
-#   6          24 LOAD_FAST                2 (i)    # Charger 'i'
-#              26 LOAD_CONST               2 (1)    # Charger la constante 1
-#              28 INPLACE_ADD                      # Incrementer 'i'
-#              30 STORE_FAST               2 (i)    # Stocker la nouvelle valeur de 'i'
-#              32 JUMP_ABSOLUTE            8        # Retourner à la ligne 8 pour continuer la boucle
-
-#   7     >>   34 LOAD_FAST                1 (somme) # Charger 'somme' finale
-#              36 RETURN_VALUE                     # Retourner la somme
 
 # COMPARE_OP : Cette instruction compare les valeurs de i et n. Elle est utilisée pour vérifier la condition de la boucle while (dans ce cas, i < n).
 # POP_JUMP_IF_FALSE : Si la comparaison retourne False, cette instruction saute à l’adresse spécifiée (ligne 30 dans ce cas), ce qui correspond à la fin de la boucle.

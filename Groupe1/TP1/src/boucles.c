@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    // int taille;
+     int taille, i =1;
 
-    // // Demander la taille du triangle
-    // printf("Entrez une valeur pour taille (strictement inférieure à 10) : ");
-    // scanf("%d", &taille);
+    // Demander la taille du triangle
+     printf("Entrez une valeur pour taille (strictement inférieure à 10) : ");
+     scanf("%d", &taille);
 
-    // // Vérifier que la taille est valide
-    // if (taille > 10 || taille <= 0) {
-    //     printf("Erreur: la taille doit être strictement inférieure à 10 et positive.\n");
-    //     return 1;
-    // }
+     // Vérifier que la taille est valide
+     if (taille > 10 || taille <= 0) {
+         printf("Erreur: la taille doit être strictement inférieure à 10 et positive.\n");
+         return 1;
+     }
 
     // // Générer le triangle avec des boucles for
     // for (int i = 1; i <= taille; i++) {
@@ -28,18 +28,7 @@ int main() {
 
     // return 0;
 
- int taille, i = 1;
-
-    // Demander la taille du triangle
-    printf("Entrez une valeur pour taille (strictement inférieure à 10) : ");
-    scanf("%d", &taille);
-
-    // Vérifier que la taille est valide
-    if (taille > 10 || taille <= 0) {
-        printf("Erreur: la taille doit être strictement inférieure à 10 et positive.\n");
-        return 1;
-    }
-
+    // Avec While
     // Générer le triangle avec une boucle while
     while (i <= taille) {
         int j = 1;
