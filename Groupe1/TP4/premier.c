@@ -4,6 +4,8 @@
 
 #define MAX 100
 
+// Ex 4.1 , 4.2
+
 // Fonction pour donner la priorité des opérateurs
 int priorite(char op) {
     if (op == '*' || op == '/')
